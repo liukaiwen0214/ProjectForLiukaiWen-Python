@@ -17,6 +17,6 @@ def get_mouse_position(nums):
         my_mouses_position_x, my_mouses_position_y = pyautogui.position()
         mouses_x.append(my_mouses_position_x)
         mouses_y.append(my_mouses_position_y)
-        print("鼠标X坐标轴为："+str(mouses_x)+"鼠标Y坐标轴为："+str(mouses_y))
         nums -= 1
         time.sleep(1)  # 暂停5秒钟
+    return mouses_x, mouses_y
