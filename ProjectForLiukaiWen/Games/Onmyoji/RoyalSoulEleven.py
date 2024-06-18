@@ -49,18 +49,23 @@ else:
     GameStartMinY = mouses_y[3]
     GameStartMaxY = mouses_y[2]
 # 循环开始
-while True:
+number_of_cycles = input("输入挑战次数：")
+while number_of_cycles > 0:
 
     # 定义挑战开始的范围
-
     GameStartX = random.uniform(GameStartMinX, GameStartMaxX)
     GameStartY = random.uniform(GameStartMinY, GameStartMaxY)
 
     # 生成点击屏幕时间
     GameStartTims = 1.0
     GameEndTims = 5.0
+    # 随机点击屏幕时间
     GameClinckTimes = random.uniform(GameStartTims, GameEndTims)
+    # 鼠标移动后暂定时间
     time.sleep(GameClinckTimes)
+    #平滑移动
+    
+    #开始点击
     pyautogui.click(GameStartX, GameStartY)
 
     # 生成游戏屏幕坐标
